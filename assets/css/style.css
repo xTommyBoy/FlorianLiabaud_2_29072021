@@ -5,6 +5,7 @@ body
 	font-family: 'Raleway';
 	box-sizing: border-box;
 	margin-left: 40px;
+    margin-right: 40px;
 }
 /* Header */
 .logo
@@ -111,7 +112,7 @@ h2
 {
 	font-size: 16px;
 	font-weight: bold;
-	margin-top: 55px;
+	margin-top: 20px;
 }
 
 .filters-text
@@ -122,11 +123,16 @@ h2
 
 .filters
 {
+    display: flex;
+    margin-top: 10px;
 	flex-wrap: wrap;
     font-weight: 700;
     font-size: 1.1rem;
-    margin-top: 30px;
-	
+}
+
+.title-filters
+{
+    margin-top: 25px;
 }
 
 .filter
@@ -139,8 +145,6 @@ h2
     padding-right: 20px;
     border-radius: 25px;
 	flex-wrap: wrap;
-	margin-top: -65px;
-	margin-right: -53px;
 }
 
 .filter span{
@@ -182,12 +186,22 @@ h2
     padding: 40px;
 }
 
+.hotels {
+    grid-column: 1 / 3;
+}
+
+.popular {
+    grid-column: 3;
+}
+
 .hotels-container
 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
 }
+
 
 .hotels > h2{
     margin: 0;
@@ -329,7 +343,6 @@ h2
 .activities-block{
     display: grid;
     grid-template-rows: 1fr 50px;
-    height: 200px;
     box-sizing: border-box;
     border-radius: 15px;
     overflow: hidden;
@@ -345,7 +358,7 @@ h2
 .activities-block img{
     width: 100%;
     object-fit: cover;
-    height: 100%;
+    height: 200px;
     margin: 0;
 }
 
