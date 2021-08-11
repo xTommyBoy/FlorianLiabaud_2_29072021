@@ -6,6 +6,7 @@ body
 	box-sizing: border-box;
 	margin-left: 40px;
     margin-right: 40px;
+    min-height: 100%;
 }
 /* Header */
 .logo
@@ -333,45 +334,127 @@ h2
     margin-bottom: 0;
 }
 
-.activities-structure{
+.activities-section {
+    height: 550px;
+    margin-bottom: 50px;
     display: grid;
-    grid-template: repeat(12, 1fr) / repeat(4, 1fr);
-    gap: 37.5px;
-    height: 200px;
-}
-
-.activities-block{
-    display: grid;
-    grid-template-rows: 1fr 50px;
-    box-sizing: border-box;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 0 7px #c1c1c1;
-}
-
-.activities-block:hover
-{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 3fr 0.3fr 0.3fr 0.3fr 0.3fr 3fr;
+    grid-gap: 30px;
+    grid-template-areas: 
+      "activity-1 activity-2 activity-4 activity-5"
+      "activity-1 activity-2 activity-4 activity-5"
+      "activity-1 activity-2 activity-4 activity-6"
+      "activity-1 activity-2 activity-4 activity-6"
+      "activity-1 activity-3 activity-4 activity-6"
+      "activity-1 activity-3 activity-4 activity-6";
+  }
+  
+  .activities-section .activities-block {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 1px 1px 17px -9px rgba(0,0,0,0.75);
+  }
+  
+  .activities-block img {
+    object-fit: cover;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  
+  .activities-section .activities-description {
+    position: absolute;
+    width: 95%;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+    padding: 20px 0 20px 5%;
+    margin: 0;
+    bottom: 0;
+  }
+  
+  .englobe {
+    height: 100%;
+    margin: 0;
+  }
+  
+  #activity-1 {
+    grid-area: activity-1;
+  }
+  #activity-2 {
+    grid-area: activity-2;  
+  }
+  #activity-3 {
+    grid-area: activity-3;
+  }
+  #activity-4 {
+    grid-area: activity-4;
+  }
+  #activity-5 {
+    grid-area: activity-5;
+  }
+  #activity-6 {
+    grid-area: activity-6;
+  }
+  
+  .activities-section .activities-block:hover {
     transform: scale(1.1);
     transition: transform .2s;
-}
-
-.activities-block img{
-    width: 100%;
-    object-fit: cover;
-    height: 200px;
-    margin: 0;
-}
-
-.activities-description{
-    align-self: center;
-    background-color: #fff;
-    padding-left: 10px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    flex: 1;
-}
+  }
 
 /* Footer */
+
+.footer {
+    width: 100%;
+    background: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-blocs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+  }
+  
+  .footer-bloc {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-bloc > * {
+    margin-bottom: 10px;
+  }
+  
+  .footer-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .footer-title:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform .2s;
+  }
+  
+  .footer-text:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform .2s;
+  }
+  
+  .footer-bloc-right {
+    margin-right: 20%;
+  }
+
+
+
 
 
 
