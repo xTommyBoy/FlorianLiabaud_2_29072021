@@ -355,7 +355,7 @@ h2
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    box-shadow: 1px 1px 17px -9px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 10px #797b80;
   }
   
   .activities-block img {
@@ -443,15 +443,169 @@ h2
     transition: transform .2s;
   }
   
-  .footer-text:hover {
+  .footer-text:hover 
+  {
     cursor: pointer;
     transform: scale(1.1);
     transition: transform .2s;
   }
-  
-  .footer-bloc-right {
-    margin-right: 20%;
-  }
+
+@media only screen and (max-width: 600px)
+{
+ .phone-tab
+ {
+     margin: 0;
+ }
+
+ h2
+ {
+     font-size: 1.4rem;
+ }
+
+ header
+ {
+    flex-direction: column;
+ }
+
+ .logo
+ {
+     margin-left: 20px;
+ }
+ 
+ .inscrire
+ {
+    align-self: flex-end;
+    padding: 0;
+    margin-right: 20px;
+    position: relative;
+    bottom: 70px;
+    border-bottom: none;
+ }
+
+ nav
+ {
+     order: 3;
+ }
+
+ nav ul
+ {
+     width: 100%;
+ }
+
+ nav li{
+    width: 50%;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 3px solid #f2f2f2;
+}
+
+nav li a{
+    padding: inherit;
+}
+
+nav li a:hover{
+    border-top: none;
+}
+
+nav li:hover{
+    border-bottom-color:#0065FC;
+}
+
+.searchbar-phone
+{
+    margin: 30px 20px;
+}
+
+.searchtext
+{
+    flex: 1;
+}
+
+.buttonsearch{
+    position: relative;
+    width: 50px;
+    border-radius: 15px;
+    right: 20px;
+}
+
+.buttonsearch span{
+    display: none;
+}
+
+
+.filters
+{
+    margin-bottom: 20px;
+    
+}
+
+.popular{
+    border-radius: 0;
+    padding: 40px 20px 30px;
+    margin-bottom: 40px;
+    flex-direction: column;
+}
+
+.popular-block{
+    height: 145px;
+    margin-bottom: 10px;
+}
+
+
+.hotel-name{
+    font-size: 1rem !important;
+}
+
+.popular-description p{
+    font-size: .9rem;
+}
+
+.popular-description{
+    padding: 15px 10px 10px 20px;
+}
+
+.fa-star{
+    font-size: .8rem !important;
+    letter-spacing: 1px;
+}
+
+.hotel-block{
+    height: 200px;
+}
+
+.hotels{
+    padding: 0 20px;
+    background-color: initial;
+}
+
+.hotels-structure{
+    grid-template: repeat(6, 1fr) / 1fr;
+    gap: 15px;
+}
+
+.hotel-block img{
+    height: 116px;
+}
+
+.hotel-description p{
+    font-size: .9rem;
+}
+
+.activities-section{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas:
+        "activity-1"
+        "activity-2"
+        "activity-3"
+        "activity-4"
+        "activity-5"
+        "activity-6";
+        height: 100px;
+        margin-bottom: 10px;
+}
+}
 
 
 
