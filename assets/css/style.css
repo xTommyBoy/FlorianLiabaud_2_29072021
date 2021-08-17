@@ -105,12 +105,23 @@ header
 	font-family: 'Raleway';
 }
 
+.buttonsearch i
+{
+    display: none;
+}
+
 .stylebaricon
 {
-    background-color: #f1f1f1;
+    background-color: #f2f2f2;
     border-radius: 15px 0 0 15px;
     width: 50px;
     display: inline-block;
+}
+
+.stylebaricon i
+{
+    padding-top: 17px;
+    padding-left: 20px;
 }
 
 ::placeholder
@@ -180,6 +191,12 @@ h2
     border-radius: 50%;
     background-color: #deebff;
     flex-wrap: wrap;
+}
+
+.filter-icon i
+{
+    padding-top: 17px;
+    padding-left: 14px;
 }
 
 ::placeholder
@@ -549,6 +566,11 @@ h2
    .buttonsearch span
    {
        display: none;
+   }
+
+   .buttonsearch i
+   {
+       display: inline;
    }
    
    
