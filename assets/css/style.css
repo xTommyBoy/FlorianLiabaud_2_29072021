@@ -594,6 +594,7 @@ h2
    .searchtext
    {
        flex: 1;
+       width: calc(100% - 106px);
    }
    
    .buttonsearch
@@ -617,15 +618,15 @@ h2
    .searchbar 
    {
        height: 50px;
-       width: 94%;
-       margin-top: 35px;
+       width: 100%;
        margin-bottom: 20px;
-       margin-left: 20px;
+       margin-left: 8px;
    }
-   
-   .searchtext 
+
+   ::placeholder
    {
-       width: calc(100% - 106px);
+       font-size: 12px;
+       padding-left: 0;
    }
    
    /*Filtres mobile*/
