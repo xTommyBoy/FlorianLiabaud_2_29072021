@@ -228,6 +228,12 @@ h2
     color: #0065FC;
 }
 
+.fas.fa-info::before
+{
+    padding-left: 7px;
+    font-size: 0.8rem;
+}
+
 
 .hotels, .popular{
     background-color: #f2f2f2;
